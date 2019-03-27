@@ -5,8 +5,9 @@ import './app_screens/home.dart';
 //Métdo principal y entrada de la aplicación
 void main(){
   runApp(MaterialApp(           //RunApp Infla el Widget y lo muestra en la pantalla principal.
+    debugShowCheckedModeBanner: false, //Quitar el logotipo que aparece en la parte superior derecha del app
     title: "Equipo de Futbol",   //Es el titulo del aPP - Se muestra al minimizar la App
-    home: Scaffold( //Define
+    home: Scaffold( //Define la creación de la aplicación
 
       appBar: AppBar(title: Text("PROGRA III C.F"),backgroundColor: Colors.indigo,), //La barra superior de la App
 
