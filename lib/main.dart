@@ -1,32 +1,34 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';  //Libreria Importante para trabajar los widgets
 import './app_screens/home.dart';
 
 
+//Métdo principal y entrada de la aplicación
 void main(){
-  runApp(MaterialApp(
-    title: "Exploring ListView",
-    home: Scaffold(
+  runApp(MaterialApp(           //RunApp Infla el Widget y lo muestra en la pantalla principal.
+    title: "Equipo de Futbol",   //Es el titulo del aPP - Se muestra al minimizar la App
+    home: Scaffold( //Define
 
-      appBar: AppBar(title: Text("PROGRA III C.F"),backgroundColor: Colors.indigo,),
+      appBar: AppBar(title: Text("PROGRA III C.F"),backgroundColor: Colors.indigo,), //La barra superior de la App
 
-      body:getListView(),
+      body:getListView(), // Es el metodo de abajo donde se encuentran la información
     )
 
   ));
 }
 
+// Declaración del método para crear la lista
 Widget getListView(){
 
-  var listView = ListView(
-    children: <Widget>[
+  var listView = ListView(  //almacenamos la lista en variable listWiev
+    children: <Widget>[  //Declaramos como hijos porque almacena una lista de widgets
 
-      ListTile(
-        leading: Icon(Icons.person),
-        title: Text("Angel ´Fernandinho´ Fernando"),
-        subtitle: Text("Técnica Demente"),
-        trailing: Text("10", style: TextStyle(fontSize: 30.5), ),
-        onTap:(){
-          debugPrint("Texto Clickeado");
+      ListTile( //La vista elejida para la cada información, por las opciones que posee
+        leading: Icon(Icons.person),  //Parte derecha del widget
+        title: Text("Angel ´Fernandinho´ Fernando"), //Título y parte central
+        subtitle: Text("Técnica Demente"), //Subtitulo y parte central
+        trailing: Text("10", style: TextStyle(fontSize: 30.5), ), //Parte final del widget
+        onTap:(){ //Método para saber si se hizo click al objeto
+          debugPrint("Texto Clickeado"); //Metodo para imprimir si se hizo click al objeto
         },
       ),
 
@@ -72,5 +74,5 @@ Widget getListView(){
     ],
   );
 
-  return listView;
+  return listView;  //Manda el resultado
 }
